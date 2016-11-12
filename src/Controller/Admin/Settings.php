@@ -13,7 +13,7 @@ class Settings extends \miaoxing\plugin\BaseController
     public function indexAction()
     {
         $settings = wei()->setting()->asc('id')->findAll();
-        $fieldSets = array();
+        $fieldSets = [];
 
         foreach ($settings as $setting) {
             $name = $setting->getTypeLabel();
@@ -22,7 +22,7 @@ class Settings extends \miaoxing\plugin\BaseController
             }
 
             if (!isset($fieldSets[$name])) {
-                $fieldSets[$name] = array();
+                $fieldSets[$name] = [];
             }
             $fieldSets[$name][] = $setting;
         }
@@ -34,7 +34,8 @@ class Settings extends \miaoxing\plugin\BaseController
 
     public function updateAction($req)
     {
-        wei()->setting->setValues((array)$req['settings']);
+        wei()->setting->setValues((array) $req['settings']);
+
         return $this->suc();
     }
 }

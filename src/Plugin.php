@@ -18,7 +18,7 @@ class Plugin extends \miaoxing\plugin\BasePlugin
         $subCategories['settings'] = [
             'parentId' => 'settings',
             'name' => '设置',
-            'icon' => 'fa fa-cogs'
+            'icon' => 'fa fa-cogs',
         ];
 
         $navs[] = [

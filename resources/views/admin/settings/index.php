@@ -33,7 +33,7 @@
                 </div>
               </div>
             <?php endif ?>
-            <?php $i++; endforeach ?>
+            <?php ++$i; endforeach ?>
         </fieldset>
       <?php endforeach ?>
 

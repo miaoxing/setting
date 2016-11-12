@@ -16,7 +16,7 @@ class SettingTest extends BaseTestCase
     {
         $this->step('获取不存在的设置,返回null');
         $value = wei()->setting('not-exists');
-        $this->assertEquals(null, $value);
+        $this->assertNull($value);
 
         $this->step('获取不存在的设置,返回指定的默认值');
         $value = wei()->setting('not-exists', 'default');
