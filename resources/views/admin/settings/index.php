@@ -9,7 +9,7 @@
 <div class="row">
   <div class="col-xs-12">
     <!-- PAGE CONTENT BEGINS -->
-    <form action="<?= $url('admin/setting/update') ?>" id="setting-form" class="form-horizontal" method="post" role="form">
+    <form action="<?= $url('admin/settings/update') ?>" id="setting-form" class="form-horizontal" method="post" role="form">
       <?php
       $i = 0;
       foreach ($fieldSets as $title => $fields) :
