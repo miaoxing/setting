@@ -1,6 +1,7 @@
 <?php
 
 namespace plugins\setting\docs {
+
     /**
      * @property    \Miaoxing\Plugin\Service\Setting $setting 设置
      * @method      mixed setting($id = null, $default = null) 初始化setting对象或获取某项配置
@@ -11,6 +12,7 @@ namespace plugins\setting\docs {
 }
 
 namespace {
+
     /**
      * @return \plugins\setting\docs\AutoComplete
      */

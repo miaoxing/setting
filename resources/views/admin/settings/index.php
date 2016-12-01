@@ -9,13 +9,11 @@
 <div class="row">
   <div class="col-xs-12">
     <!-- PAGE CONTENT BEGINS -->
-    <form action="<?= $url('admin/settings/update') ?>" id="setting-form" class="form-horizontal" method="post" role="form">
-      <?php
-      $i = 0;
-      foreach ($fieldSets as $title => $fields) :
-        ?>
+    <form action="<?= $url('admin/settings/update') ?>" id="setting-form" class="form-horizontal" method="post"
+      role="form">
+      <?php foreach ($fieldSets as $title => $fields) : ?>
         <fieldset>
-          <legend><h4><?= $title ?></h4></legend>
+          <legend><small><?= $title ?></small></legend>
           <?php foreach ($fields as $field) : ?>
             <?php if ($field->getLabel()) : ?>
               <div class="form-group">
@@ -26,14 +24,18 @@
 
                 <div class="col-lg-6">
                   <?php if (in_array($field['id'], $editorFields)) : ?>
-                    <textarea rows="3" id="<?= $field['id'] ?>" name="settings[<?= $field['id'] ?>]"><?= $e->attr($field['value']) ?></textarea>
+                    <textarea rows="3" id="<?= $field['id'] ?>"
+                      name="settings[<?= $field['id'] ?>]"><?= $e($field['value']) ?></textarea>
                   <?php else : ?>
-                    <input type="text" class="form-control" id="<?= $field['id'] ?>" name="settings[<?= $field['id'] ?>]" value="<?= $e->attr($field['value']) ?>">
+                    <!-- htmllint id-no-dup="false" -->
+                    <input type="text" class="form-control" id="<?= $field['id'] ?>"
+                      name="settings[<?= $field['id'] ?>]" value="<?= $e->attr($field['value']) ?>">
+                    <!-- htmllint id-no-dup="$previous" -->
                   <?php endif ?>
                 </div>
               </div>
             <?php endif ?>
-            <?php ++$i; endforeach ?>
+          <?php endforeach ?>
         </fieldset>
       <?php endforeach ?>
 
