@@ -25,6 +25,7 @@ class Plugin extends \miaoxing\plugin\BasePlugin
             'parentId' => 'settings',
             'url' => 'admin/settings',
             'name' => '站点设置',
+            'sort' => 500,
         ];
     }
 }
