@@ -2,7 +2,7 @@
 
 namespace Miaoxing\Setting;
 
-class Plugin extends \miaoxing\plugin\BasePlugin
+class Plugin extends \Miaoxing\Plugin\BasePlugin
 {
     protected $name = '站点配置';
 
