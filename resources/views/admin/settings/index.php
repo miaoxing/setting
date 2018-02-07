@@ -57,7 +57,10 @@
 <script>
   require(['form', 'ueditor'], function () {
     $('#setting-form').ajaxForm({
-      dataType: 'json'
+      dataType: 'json',
+      success: function (ret) {
+        $.msg(ret);
+      }
     });
 
     $('textarea').each(function () {
