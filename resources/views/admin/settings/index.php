@@ -55,7 +55,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['form', 'ueditor'], function () {
+  require(['plugins/admin/js/form', 'ueditor'], function () {
     $('#setting-form').ajaxForm({
       dataType: 'json',
       success: function (ret) {
